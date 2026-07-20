@@ -1,6 +1,8 @@
 <Solution>
   <Project Path="DelegateExample/DelegateExample.csproj" Id="8b7ee93d-4bd7-4e46-b9bb-f663d9b30b69" />
+  <Project Path="Exercise2_CalculatorExample/Exercise2_CalculatorExample.csproj" Id="ca508ffe-c010-487b-9d2c-6839868d71b2" />
   <Project Path="First_Exercise/Exercise1.csproj" />
   <Project Path="First_Exercise_Practice/Exercise1_Circus.csproj" />
   <Project Path="FormExample/FormExample.csproj" Id="1e30e775-f55e-4eff-ae36-ab112a97451c" />
+  <Project Path="HomeAssignment1_Example/HomeAssignment1_Example.csproj" Id="ddc9398b-7b12-4d50-af65-69b64bf5816f" />
 </Solution>
