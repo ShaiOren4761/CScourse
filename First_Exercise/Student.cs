@@ -1,11 +1,12 @@
-﻿using System;
+﻿using Exercise1;
+using System;
 using System.Collections.Generic;
 using System.Reflection.Metadata.Ecma335;
 using System.Text;
 
 namespace First_Exercise
 {
-    public class Student : Human
+    public class Student : Human, Resizeable
     {
         private int id;
         private string name;
@@ -44,6 +45,11 @@ namespace First_Exercise
         public void print()
         {
             Console.WriteLine("Student name: "+this.name + " id: " + this.id);
+        }
+
+        public void Resize(int factor) // this is an example to interface implementation, obviously pointless with Student..
+        {
+            Console.WriteLine("resize used on Student!");
         }
 
         public static Student operator+(Student a, Student b)

@@ -1,4 +1,6 @@
 <Solution>
+  <Project Path="DelegateExample/DelegateExample.csproj" Id="8b7ee93d-4bd7-4e46-b9bb-f663d9b30b69" />
   <Project Path="First_Exercise/Exercise1.csproj" />
   <Project Path="First_Exercise_Practice/Exercise1_Circus.csproj" />
+  <Project Path="FormExample/FormExample.csproj" Id="1e30e775-f55e-4eff-ae36-ab112a97451c" />
 </Solution>
