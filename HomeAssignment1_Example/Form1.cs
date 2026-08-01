@@ -26,7 +26,7 @@ namespace HomeAssignment1_Example
                     buttons[i, j].Text += count++;
                     buttons[i, j].Width = 100;
                     buttons[i, j].Height = 100;
-                    buttons[i, j].Location = new Point(5 + (100 + 10) * i, 5 + (100 + 20) * j); // grid magic
+                    buttons[i, j].Location = new Point(5 + (100) * i, 5 + (100) * j); // grid magic
                     buttons[i, j].Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                     buttons[i, j].BackColor = Color.FromArgb(rnd.Next(255), rnd.Next(255), rnd.Next(255));
                     buttons[i, j].Click += btClick; // Click is a delegate!

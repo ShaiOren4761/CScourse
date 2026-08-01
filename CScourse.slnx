@@ -1,8 +1,11 @@
 <Solution>
+  <Project Path="Assignment1_207667916/Assignment1_207667916.csproj" Id="31790a30-740a-4cd4-a764-12823c27b462" />
   <Project Path="DelegateExample/DelegateExample.csproj" Id="8b7ee93d-4bd7-4e46-b9bb-f663d9b30b69" />
   <Project Path="Exercise2_CalculatorExample/Exercise2_CalculatorExample.csproj" Id="ca508ffe-c010-487b-9d2c-6839868d71b2" />
   <Project Path="First_Exercise/Exercise1.csproj" />
   <Project Path="First_Exercise_Practice/Exercise1_Circus.csproj" />
   <Project Path="FormExample/FormExample.csproj" Id="1e30e775-f55e-4eff-ae36-ab112a97451c" />
   <Project Path="HomeAssignment1_Example/HomeAssignment1_Example.csproj" Id="ddc9398b-7b12-4d50-af65-69b64bf5816f" />
+  <Project Path="Lesson3/Lesson3_Form_Example.csproj" Id="f11544dc-fd46-4c71-ad8d-54713982f8ed" />
+  <Project Path="WinFormsApp1/Lesson3_2nd_Part.csproj" Id="fcea9b43-99e9-4c34-a82a-3316298b5f65" />
 </Solution>
