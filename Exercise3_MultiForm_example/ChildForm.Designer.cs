@@ -1,6 +1,6 @@
-﻿namespace Assignment1_207667916
+﻿namespace Exercise3_MultiForm_example
 {
-    partial class Game
+    partial class ChildForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,20 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // Game
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(240, 151);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(190, 69);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "label1";
+            // 
+            // ChildForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Name = "Game";
-            this.Text = "Form1";
+            this.ClientSize = new System.Drawing.Size(804, 229);
+            this.Controls.Add(this.label1);
+            this.Name = "ChildForm";
+            this.Text = "Child";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
+
+        private System.Windows.Forms.Label label1;
     }
 }
-

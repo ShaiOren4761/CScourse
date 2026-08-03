@@ -1,6 +1,6 @@
-﻿namespace Assignment1_207667916
+﻿namespace Exercise3_MultiForm_example
 {
-    partial class Game
+    partial class MdiForm
     {
         /// <summary>
         /// Required designer variable.
@@ -30,13 +30,15 @@
         {
             this.SuspendLayout();
             // 
-            // Game
+            // MdiForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Name = "Game";
+            this.ClientSize = new System.Drawing.Size(1717, 570);
+            this.IsMdiContainer = true;
+            this.Name = "MdiForm";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.MdiForm_Load);
             this.ResumeLayout(false);
 
         }

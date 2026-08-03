@@ -2,6 +2,10 @@
   <Project Path="Assignment1_207667916/Assignment1_207667916.csproj" Id="31790a30-740a-4cd4-a764-12823c27b462" />
   <Project Path="DelegateExample/DelegateExample.csproj" Id="8b7ee93d-4bd7-4e46-b9bb-f663d9b30b69" />
   <Project Path="Exercise2_CalculatorExample/Exercise2_CalculatorExample.csproj" Id="ca508ffe-c010-487b-9d2c-6839868d71b2" />
+  <Project Path="Exercise3/Exercise3_Timer_Example.csproj" Id="a7ea3c3c-fd84-439c-a936-a3e44b474650" />
+  <Project Path="Exercise3_Dynamic_Button_Creation/Exercise3_Dynamic_Button_Creation.csproj" Id="c73f1372-8d70-473d-9517-62d6b4c9466d" />
+  <Project Path="Exercise3_MultiForm_example/Exercise3_MDI_example.csproj" Id="7999f9b9-8c3c-4557-b4f9-cd828fad2f19" />
+  <Project Path="Exercise3_Timer_Practice/Exercise3_Timer_Practice.csproj" Id="991a746c-e0fe-4e1e-beb6-73078de32586" />
   <Project Path="First_Exercise/Exercise1.csproj" />
   <Project Path="First_Exercise_Practice/Exercise1_Circus.csproj" />
   <Project Path="FormExample/FormExample.csproj" Id="1e30e775-f55e-4eff-ae36-ab112a97451c" />
