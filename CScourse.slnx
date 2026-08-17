@@ -1,16 +1,22 @@
 <Solution>
   <Project Path="Assignment1_207667916/Assignment1_207667916.csproj" Id="31790a30-740a-4cd4-a764-12823c27b462" />
+  <Project Path="Assignment2_207667916/Assignment2_207667916.csproj" Id="ed602e15-08ab-4bfa-acab-ed058f9faa7b" />
   <Project Path="DelegateExample/DelegateExample.csproj" Id="8b7ee93d-4bd7-4e46-b9bb-f663d9b30b69" />
   <Project Path="Exercise2_CalculatorExample/Exercise2_CalculatorExample.csproj" Id="ca508ffe-c010-487b-9d2c-6839868d71b2" />
   <Project Path="Exercise3/Exercise3_Timer_Example.csproj" Id="a7ea3c3c-fd84-439c-a936-a3e44b474650" />
   <Project Path="Exercise3_Dynamic_Button_Creation/Exercise3_Dynamic_Button_Creation.csproj" Id="c73f1372-8d70-473d-9517-62d6b4c9466d" />
   <Project Path="Exercise3_MultiForm_example/Exercise3_MDI_example.csproj" Id="7999f9b9-8c3c-4557-b4f9-cd828fad2f19" />
   <Project Path="Exercise3_Timer_Practice/Exercise3_Timer_Practice.csproj" Id="991a746c-e0fe-4e1e-beb6-73078de32586" />
+  <Project Path="Exercise5_UserControl_Practice/Exercise5_UserControl_Practice.csproj" Id="3c88d05b-1f21-432e-8b55-f0d5f3aed54f" />
+  <Project Path="Exercise6_Threads_Practice/Exercise6_Threads_Practice.csproj" Id="43533463-cc9f-4c25-8f0c-40802f1f9cc1" />
   <Project Path="First_Exercise/Exercise1.csproj" />
   <Project Path="First_Exercise_Practice/Exercise1_Circus.csproj" />
   <Project Path="FormExample/FormExample.csproj" Id="1e30e775-f55e-4eff-ae36-ab112a97451c" />
   <Project Path="HomeAssignment1_Example/HomeAssignment1_Example.csproj" Id="ddc9398b-7b12-4d50-af65-69b64bf5816f" />
   <Project Path="Lesson3/Lesson3_Form_Example.csproj" Id="f11544dc-fd46-4c71-ad8d-54713982f8ed" />
   <Project Path="Lesson5_UserControl_Example/Lesson5_UserControl_Example.csproj" Id="16ad5140-f9fe-4fb3-a270-42a069736875" />
+  <Project Path="Lesson6_Form_Multi_Thread_Example/Lesson6_Form_Multi_Thread_Example.csproj" Id="482e3b6b-408d-4c51-9434-8b132709db73" />
+  <Project Path="Lesson6_Multi_Threading_Example/Lesson6_Multi_Threading_Example.csproj" Id="cae11e6c-ee28-43ce-86af-2e9379d14c97" />
+  <Project Path="RGB_ButtonLabel_Transport_UserControl/RGB_ButtonLabel_Transport_UserControl.csproj" Id="880d26fc-6d17-4902-9f60-16ce2966bc61" />
   <Project Path="WinFormsApp1/Lesson3_2nd_Part.csproj" Id="fcea9b43-99e9-4c34-a82a-3316298b5f65" />
 </Solution>
