@@ -18,5 +18,6 @@
   <Project Path="Lesson6_Form_Multi_Thread_Example/Lesson6_Form_Multi_Thread_Example.csproj" Id="482e3b6b-408d-4c51-9434-8b132709db73" />
   <Project Path="Lesson6_Multi_Threading_Example/Lesson6_Multi_Threading_Example.csproj" Id="cae11e6c-ee28-43ce-86af-2e9379d14c97" />
   <Project Path="RGB_ButtonLabel_Transport_UserControl/RGB_ButtonLabel_Transport_UserControl.csproj" Id="880d26fc-6d17-4902-9f60-16ce2966bc61" />
+  <Project Path="RGB_ButtonLabel_Transport_UserControl_Harder/RGB_ButtonLabel_Transport_UserControl_Harder.csproj" Id="db9c6de8-dabd-4ded-927e-f8a4e63bee9d" />
   <Project Path="WinFormsApp1/Lesson3_2nd_Part.csproj" Id="fcea9b43-99e9-4c34-a82a-3316298b5f65" />
 </Solution>
