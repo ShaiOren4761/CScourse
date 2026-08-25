@@ -46,7 +46,7 @@
                 new Thread(d1).Start((char)(i + 65) + "");
             }
 
-            throw new Exception(); // Just to see output..
+            //throw new Exception(); // Just to see output..
         }
     }
 }

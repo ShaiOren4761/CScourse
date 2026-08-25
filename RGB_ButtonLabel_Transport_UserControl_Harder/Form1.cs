@@ -1,4 +1,9 @@
-﻿using System;
+﻿
+
+// Cursed code, won't work properly despite GPT intervention.
+
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -23,6 +28,10 @@ namespace RGB_ButtonLabel_Transport_UserControl
             arrUC_To = new UserControl1[3], arrUC_Transport = new UserControl1[3];
         private const int N = 55;
         private Color[] arrColors = new Color[] { Color.Red, Color.Green, Color.Blue };
+        AutoResetEvent[] autoReset1 = new AutoResetEvent[3];
+        AutoResetEvent[] autoReset2 = new AutoResetEvent[3];
+        int[] transportCount = new int[3] {0,0,0};
+        bool[]isEnd= new bool[3] {false, false, false};
 
         Thread[] arrThreads = new Thread[3];
         Thread[] arrTransThreads = new Thread[3];
@@ -57,7 +66,9 @@ namespace RGB_ButtonLabel_Transport_UserControl
             for(int i=0; i<3; i++)
             {
                 arrThreads[i] = new Thread(ToTransport);
+                autoReset1[i] = new AutoResetEvent(false);
                 arrTransThreads[i] = new Thread(fromTransport);
+                autoReset2[i] = new AutoResetEvent(false);
                 arrThreads[i].Start(i);
                 arrTransThreads[i].Start(i);
             }
@@ -66,39 +77,72 @@ namespace RGB_ButtonLabel_Transport_UserControl
         private void ToTransport(Object o)
         {
             int indexColor = (int)o;
-            int transportCount = 0;
+            isEnd[indexColor] = false;
 
-            for (int i=0; i< arrUC_From.Length; i++)
+            for (int i = 0; i < arrUC_From.Length; i++)
             {
-                for (int j=0; j < arrUC_From[i].arrControls.Length; j++)
+                for (int j = 0; j < arrUC_From[i].arrControls.Length; j++)
                 {
                     Control tmp = arrUC_From[i].arrControls[j];
                     if (tmp == null) continue;
-                    if((tmp.BackColor.R > 0 && indexColor==0) || (tmp.BackColor.G > 0 && indexColor == 1) || (tmp.BackColor.B > 0 && indexColor == 2))
-                    {
-                        this.Invoke(new myAddDelegate(Add), arrUC_Transport[indexColor], transportCount++, arrUC_From[i], j);
-                        this.Invoke(new myRemoveDelegate(Remove), arrUC_From[i], j);
-                        Thread.Sleep(300);
 
-                        if (transportCount == 5) Thread.Sleep(1000000000); // We haven't learned monitors yet..
+                    if ((tmp.BackColor.R > 0 && indexColor == 0) ||
+                        (tmp.BackColor.G > 0 && indexColor == 1) ||
+                        (tmp.BackColor.B > 0 && indexColor == 2))
+                    {
+                        this.Invoke(new myAddDelegate(Add),
+                            arrUC_Transport[indexColor],
+                            transportCount[indexColor]++,
+                            arrUC_From[i], j);
+
+                        this.Invoke(new myRemoveDelegate(Remove), arrUC_From[i], j);
+
+                        Thread.Sleep(30);
+
+                        if (transportCount[indexColor] == 5)
+                        {
+                            autoReset2[indexColor].Set();
+                            autoReset1[indexColor].WaitOne();
+                        }
                     }
                 }
             }
+
+            isEnd[indexColor] = true;
+            autoReset2[indexColor].Set();
         }
 
         private void fromTransport(object o)
         {
             int indexColor = (int)o;
             int destCounter = 0;
-            Thread.Sleep(11000);
-            for(int i=0; i<5; i++)
-            {
-                Control temp = arrUC_Transport[indexColor].arrControls[i];
-                this.Invoke(new myAddDelegate(Add), arrUC_To[indexColor], destCounter++, arrUC_Transport[indexColor], i);
-                this.Invoke(new myRemoveDelegate(Remove), arrUC_Transport[indexColor], i);
-                Thread.Sleep(300);
-            }
 
+            while (true)
+            {
+                autoReset2[indexColor].WaitOne();
+
+                int count = transportCount[indexColor];
+
+                for (int i = 0; i < count; i++)
+                {
+                    this.Invoke(new myAddDelegate(Add),
+                        arrUC_To[indexColor],
+                        destCounter++,
+                        arrUC_Transport[indexColor], i);
+
+                    this.Invoke(new myRemoveDelegate(Remove),
+                        arrUC_Transport[indexColor], i);
+
+                    Thread.Sleep(30);
+                }
+
+                transportCount[indexColor] = 0;
+
+                if (isEnd[indexColor])
+                    break;
+
+                autoReset1[indexColor].Set();
+            }
         }
 
         private void Add(UserControl1 UC_To, int counter_To, UserControl1 UC_From, int index_From)
